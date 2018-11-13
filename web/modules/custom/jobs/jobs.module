@@ -1,0 +1,12 @@
+<?php
+
+/*
+ * Create hook_theme();
+ */
+function jobs_theme($existing, $type, $theme, $path) {
+  return [
+    'listing-jobs' => [
+      'variables' => ['jobs' => array(), 'title' => 'Listing Jobs'],
+    ],
+  ];
+}

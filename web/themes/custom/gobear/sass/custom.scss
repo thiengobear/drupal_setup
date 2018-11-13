@@ -1,0 +1,68 @@
+/**
+ * Custom css for Job Listing
+ */
+$font-roboto: "Roboto";
+$font-varela: "Varela Round";
+$bg-image: '../images/gobear-jobs-overview.jpg';
+
+.item-job {  
+  border: 1px solid #ccc;
+  padding: 15px 30px;  
+  margin-bottom: 20px;
+  .title {
+    font-family: $font-varela;
+    font-weight: bold;
+    margin-top: 0px; }
+  .company, 
+  .location, 
+  .created-at, 
+  .assignment, 
+  .more-info a,
+  .job-type-section {
+    text-align: center;
+    margin-top: 30px;
+    .job-type {
+      text-transform: uppercase;
+      border-radius:0px;
+      padding: 5px 15px;
+      font-family: $font-roboto;
+      line-height: 1.5; 
+    } 
+  }
+}
+
+.content-more-info {
+  display: none;
+  text-align: justify;
+  margin-top: 10px;
+  font-family: $font-roboto;
+  font-size: 14px;
+}
+
+.section-created-at {
+  padding-top:10px;
+}
+.content-left-section {
+  font-size: 13px;
+}
+.more-info {
+  margin-top: 6px;
+  text-decoration: none;
+}
+h1.page-header {
+  background: url($bg-image); 
+  background-size: 100% 100%;
+  padding: 50px 70px;
+  text-align: center;
+  color: #fff;
+}
+.main-container {
+  width: 100% !important;	
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#main-job-container {
+  margin-top: 50px;
+}
+
+@import 'reset';

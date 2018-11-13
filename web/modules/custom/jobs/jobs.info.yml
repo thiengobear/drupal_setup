@@ -1,0 +1,5 @@
+name: Jobs
+description: Jobs Module
+type: module
+package: Custom
+core: 8.x
