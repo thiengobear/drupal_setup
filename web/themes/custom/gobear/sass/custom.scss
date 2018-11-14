@@ -1,3 +1,5 @@
+@import 'component/reset';
+
 /**
  * Custom css for Job Listing
  */
@@ -5,9 +7,23 @@ $font-roboto: "Roboto";
 $font-varela: "Varela Round";
 $bg-image: '../images/gobear-jobs-overview.jpg';
 
+@mixin padding-custom($top, $right, $bottom: $top, $left: $right) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+.col-md-12[role="button"] {
+  padding-left: 0px;
+}
+
 .item-job {  
   border: 1px solid #ccc;
-  padding: 15px 30px;  
+  float: left;
+  width: 100%;
+  /* padding: 15px 30px; */
+  @include padding-custom(15px, 30px);
   margin-bottom: 20px;
   .title {
     font-family: $font-varela;
@@ -24,7 +40,8 @@ $bg-image: '../images/gobear-jobs-overview.jpg';
     .job-type {
       text-transform: uppercase;
       border-radius:0px;
-      padding: 5px 15px;
+      /*padding: 5px 15px;*/
+      @include padding-custom(5px, 15px);
       font-family: $font-roboto;
       line-height: 1.5; 
     } 
@@ -52,7 +69,8 @@ $bg-image: '../images/gobear-jobs-overview.jpg';
 h1.page-header {
   background: url($bg-image); 
   background-size: 100% 100%;
-  padding: 50px 70px;
+  /*padding: 50px 70px;*/
+  @include padding-custom(50px, 70px);
   text-align: center;
   color: #fff;
 }
@@ -65,4 +83,13 @@ h1.page-header {
   margin-top: 50px;
 }
 
-@import 'component/reset';
+@for $i from 1 through 4 {
+    .item-#{$i}{
+      @if ($i % 2 == 0) {
+        background: blue;
+      }@else {
+        background: green;
+      }
+      
+    }
+}
