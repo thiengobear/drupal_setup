@@ -14,6 +14,10 @@ $text_color_white: #fff;
   padding-left: 0px;
 }
 
+.main-container {
+  @include set-container(100%);
+}
+
 .item-job {  
   border: 1px solid #ccc;
   float: left;
@@ -72,7 +76,7 @@ $text_color_white: #fff;
     family: $font-roboto;
     size: 14px;
   }
-  @include make-inset-box();
+  @include make-inset-box;
 }
 
 h1.page-header {
@@ -81,9 +85,7 @@ h1.page-header {
   text-align: center;
   color: $text_color_white;
 }
-.main-container {
-  @include set-container(100%);
-}
+
 #main-job-container {
   margin-top: 50px;
 }
