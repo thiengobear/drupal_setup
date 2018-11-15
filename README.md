@@ -15,6 +15,9 @@
 - another loop
 - responsive with SASS
 
+##DB Information
+- "\web\DB\drupal_setup.sql"
+
 # [11/15/2018] Practice SASS on Jobs Overview assessment
 - URL: /jobs or home page
 - SASS: \web\themes\custom\gobear\sass\custom.scss
