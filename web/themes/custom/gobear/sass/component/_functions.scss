@@ -12,8 +12,18 @@
   @include padding-custom($top);
 }
 
-//Set background 
+// Set background 
 @mixin set-bg($bg_img, $bg_width, $bg_height: $bg_width) {
   background: url($bg_img); 
   background-size: $bg_width $bg_height;
+}
+
+// Make inset box with padding. Have default value
+@mixin make-inset-box($box_bg_color: #fff, $box_padding: 15px, $box_border_radius: 3px) {
+  @include padding-custom($box_padding);
+  -moz-box-shadow:    inset 0 0 10px #000;
+  -webkit-box-shadow: inset 0 0 10px #000;
+  box-shadow:         inset 0 0 10px #000;
+  background-color: $box_bg_color;
+  border-radius: $box_border_radius;
 }

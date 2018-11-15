@@ -1,5 +1,4 @@
 @import 'component/reset';
-
 @import 'component/functions';
 
 /**
@@ -8,7 +7,8 @@
 $font-roboto: "Roboto";
 $font-varela: "Varela Round";
 $bg-image: '../images/gobear-jobs-overview.jpg';
-$text_color: #fff;
+$text_color_white: #fff;
+
 
 .col-md-12[role="button"] {
   padding-left: 0px;
@@ -21,14 +21,12 @@ $text_color: #fff;
   @include padding-custom(15px, 30px);
   margin-bottom: 20px;
   .title {
-    font-family: $font-varela;
-    font-weight: bold;
+    font: {
+      family: $font-varela;
+      weight: bold;
+    }
     margin-top: 0px; 
   }
-  .company, 
-  .location, 
-  .created-at, 
-  .assignment, 
   .job-type-section {
     text-align: center;
     margin-top: 30px;
@@ -40,15 +38,16 @@ $text_color: #fff;
       line-height: 1.5; 
     } 
   }
+  .company, 
+  .location, 
+  .created-at, 
+  .assignment {
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
-.content-more-info {
-  display: none;
-  text-align: justify;
-  margin-top: 10px;
-  font-family: $font-roboto;
-  font-size: 14px;
-}
+
 
 .section-created-at {
   padding-top: 10px;
@@ -64,11 +63,23 @@ $text_color: #fff;
     padding-left: 15px;
   }
 }
+
+.content-more-info {
+  display: none;
+  text-align: justify;
+  margin-top: 10px;
+  font: {
+    family: $font-roboto;
+    size: 14px;
+  }
+  @include make-inset-box();
+}
+
 h1.page-header {
   @include set-bg($bg-image, 100%);
   @include padding-custom(50px, 70px);
   text-align: center;
-  color: $text_color;
+  color: $text_color_white;
 }
 .main-container {
   @include set-container(100%);
@@ -78,7 +89,7 @@ h1.page-header {
 }
 
 /**
- * Loop
+ * Loop demo with If condition
  */
 @for $i from 1 through 2 {
   .item-#{$i - 1}{
