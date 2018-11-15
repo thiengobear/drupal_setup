@@ -15,7 +15,7 @@
 - another loop
 - responsive with SASS
 
-##DB Information
+## DB Information
 - "\web\DB\drupal_setup.sql"
 
 # [11/15/2018] Practice SASS on Jobs Overview assessment
