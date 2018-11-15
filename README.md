@@ -14,3 +14,8 @@
 ## Continues with
 - another loop
 - responsive with SASS
+
+# [11/15/2018] Practice SASS on Jobs Overview assessment
+- URL: /jobs or home page
+- SASS: \web\themes\custom\gobear\sass\custom.scss
+- SASS component in \web\themes\custom\gobear\sass\component\: have _reset.scss and _functions.scss
