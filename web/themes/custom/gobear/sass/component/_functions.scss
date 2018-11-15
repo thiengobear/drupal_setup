@@ -1,0 +1,19 @@
+//This just example how mixin work and default variable of mixin, I know CSS padding already have this.
+@mixin padding-custom($top, $right: $top, $bottom: $top, $left: $right) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+// Set container
+@mixin set-container($width: 100%, $top: 0px, $right: $top, $bottom: $top, $left: $right) {
+  width: $width !important; 
+  @include padding-custom($top);
+}
+
+//Set background 
+@mixin set-bg($bg_img, $bg_width, $bg_height: $bg_width) {
+  background: url($bg_img); 
+  background-size: $bg_width $bg_height;
+}
