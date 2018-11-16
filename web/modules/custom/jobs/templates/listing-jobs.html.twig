@@ -1,28 +1,28 @@
-<div class="container" id="main-job-container">
+<div class="container">
   <div class="row">    
-	{% set inPos = 1 %}
 	{% for itemJob in jobs %}
-		<div class="col-lg-12 item-job item-{{ inPos }}">
-		  <div class="col-md-10 col-sm-10 content-left-section">
+		<div class="col-lg-12">
+		  <div class="col-md-10 col-sm-10">
 			<h3 class="title">{{ itemJob.title }}</h3>
 			<div>
-				<a href="#" class="company">@{{ itemJob.company }}</a> | <span class="location">{{ itemJob.location }}</span>
+				<a href="#">@{{ itemJob.company }}</a> | <span>{{ itemJob.location }}</span>
 			</div>
-			<div class="section-created-at">
-				<span class="created-at">{{ itemJob.created_at }}</span>
+			<div>
+				<span>{{ itemJob.created_at }}</span>
 			</div>
 		  </div>
-		  <div class="col-md-2 col-sm-2 job-type-section">
-			<button class="btn btn-success job-type">{{ itemJob.type }}</button>
+		  <div class="col-md-2 col-sm-2">
+			<button class="btn">{{ itemJob.type }}</button>
 		  </div>
-		  <div class="col-md-12 col-sm-12 more-info">	
+		  <div class="col-md-12 col-sm-12">	
 			<a data-toggle="collapse" href="#{{ itemJob.id }}" aria-expanded="false" aria-controls="{{ itemJob.id }}">More info ></a>
-			<div class="content-more-info" id="{{ itemJob.id }}">
+			<!--
+			<div id="{{ itemJob.id }}">
               {{ itemJob.description | raw }}
-			</div>		
+			</div>	
+			-->			
 		  </div>
 		</div>
-		{% set inPos = 1 - inPos %}		
 	{% endfor %}   
   </div>
 </div>
